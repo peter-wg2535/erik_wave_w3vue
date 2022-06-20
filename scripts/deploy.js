@@ -1,5 +1,6 @@
 const hre = require('hardhat')
 
+
 async function main() {
   const [deployer] = await hre.ethers.getSigners()
 
@@ -11,7 +12,7 @@ async function main() {
   const wave = await WavePortal.deploy()
 
   await wave.deployed()
-
+  console.log('GustBook WebPortal')
   console.log('Wave portal deployed to:', wave.address)
 }
 
